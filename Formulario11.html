@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>Formulario  |  GL</title>
+</head>
+<body>
+    <section id="Formulario">
+    <div class="content">
+        <h1>
+            <picture source media="(min-width: 1100px)"></picture>
+         <h1>formulario Avaliativo </h1>
+        </h1>
+        <form id="form">
+         <div>
+            <form action="processar-dados.php" method="post">
+            <input type="text" name="nome" class="inputs required" autocomplete="off" required placeholder="Digite seu nome">
+         </div> 
+          <p>Escolha o profissional</p>
+          <div class="box-select">
+            <div>
+              <input type="checkbox" id="profissional 1" value="profissional 1" name="avaliacao">
+              <label for="profissional 1">Profissional 1</label>
+          </div>
+          <div>
+              <input type="checkbox" id="profissional 2" value="profissional 2" name="avaliacao">
+              <label for="profissional 2">Profissional 2</label>
+          </div>
+          <div>
+              <input type="checkbox" id="profissional 3" value="profissional 3" name="avaliacao">
+              <label for="profissional 3">Profissional 3</label>
+          </div>
+          <div>
+              <input type="checkbox" id="profissional 4" value="profissional 4" name="avaliacao">
+              <label for="profissional 4">Profissional 4</label>
+          </div>
+
+
+          <div>
+            <label for="textarea">Avaliação profissional
+
+            </label>
+            <textarea class="inputs" name="avalie"cols="30" rows="10" placeholder="O que o profisional tem que mudar para ter um trabalho em equipe melhor na sua visão." autocomplete="off" required></textarea>
+          </div>
+          <button type="submit">ENVIAR</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>

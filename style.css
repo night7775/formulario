@@ -1,0 +1,111 @@
+:root{
+    --colo-white:#fff; 
+    --colo-red: #e63636;  
+    --colo-dark1: #181818;
+    --colo-dark2:#1e1e1e; 
+    --colo-purple1: #9333fF; 
+    --colo-purple2: indigo; 
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--colo-dark1);
+    color: var(--colo-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.content{
+    background-color: var(--colo-dark2);
+    padding: 3rem;
+    border-radius: 30px;
+    width: 90%;
+    min-width:300px;
+    overflow: auto;
+}
+
+h1{
+    margin-bottom: 1rem;
+    text-align: center;
+   
+}
+
+.content form{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    
+}
+
+.span-required{
+    display:none;
+
+}
+.inputs{
+    padding: 8px 5px; /* considere ajuste em telas menores */
+    outline: none;
+    border-radius: 4px;
+    background-color: var(--colo-dark1);
+    border: 4px solid var(--colo-dark1);
+    color: var(--colo-white);
+    width: 100%;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+.inputs:focus{
+    border-color: var(--colo-purple1);
+}
+
+.box-select{
+    display: auto;
+    justify-content: space-evenly;
+    font-weight: bold;
+    gap: 1rem
+}
+
+button[type="submit"]{
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    background-color: var(--colo-purple2);
+    color:var(--colo-white);
+    cursor: pointer;
+    transform:background-color 0.3s; /*correção*/
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box
+}
+button[type="submit"]:hover{
+background-color: var(--colo-purple1);
+}
+
+@media screen and (max-width: 576px) {
+    .box-select{
+        flex-direction: column;
+    }
+    .content {
+        padding: 2rem; /* Reduz o padding em telas pequenas */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Ajusta o tamanho do cabeçalho */
+    }
+
+    .inputs {
+        padding: 6px; /* Reduz o padding dos inputs */
+    }
+}
